@@ -6,7 +6,7 @@ This repository ships built wheels for the [Admiralty Fleet Command System](http
 ## Install
 
 ```bash
-pip install admiralty --extra-index-url https://tavisbasing.github.io/admiralty-dist/
+pip install admiralty --extra-index-url https://tavisbasing.github.io/admiralty-dist/simple/
 ```
 
 That's it. After installation:
