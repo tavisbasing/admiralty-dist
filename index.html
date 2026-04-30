@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>admiralty-dist — Distribution channel for the Admiralty CLI</title>
+<style>
+  :root {
+    --navy-50: #F4F7FB; --navy-700: #1F3666; --navy-900: #0A1A3A;
+    --aqua-500: #00BCD4; --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; background: var(--navy-50); color: var(--navy-900); margin: 0; padding: 2rem 1.5rem; line-height: 1.55; }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin-top: 0; }
+  h2 { font-size: 1.15rem; margin-top: 2.2rem; color: var(--navy-700); }
+  pre { background: #fff; border: 1px solid #d8dde9; border-radius: 6px; padding: 0.9rem 1rem; overflow-x: auto; font-family: var(--mono); font-size: 0.9rem; }
+  code { font-family: var(--mono); font-size: 0.92em; background: #fff; padding: 0.05rem 0.32rem; border-radius: 3px; border: 1px solid #d8dde9; }
+  pre code { padding: 0; border: 0; background: transparent; }
+  a { color: var(--aqua-500); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .meta { color: var(--navy-700); font-size: 0.95rem; }
+  .note { background: #fff; border-left: 3px solid var(--aqua-500); padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; margin: 1.2rem 0; font-size: 0.95rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin: 0.3rem 0; }
+  hr { border: 0; border-top: 1px solid #d8dde9; margin: 2.5rem 0; }
+  footer { color: var(--navy-700); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>admiralty-dist</h1>
+<p class="meta">Distribution channel for the <a href="https://admiraltyai.com">Admiralty Fleet Command System</a>. Wheels only — no source code in this repository.</p>
+
+<h2>Install</h2>
+<pre><code>pip install admiralty --extra-index-url https://tavisbasing.github.io/admiralty-dist/</code></pre>
+
+<p>After installation:</p>
+<pre><code>adm version
+adm licence activate &lt;YOUR-KEY&gt;
+adm quickstart</code></pre>
+
+<div class="note">
+You don't need a GitHub account to install. The <a href="https://docs.admiraltyai.com">documentation</a> covers activation, the licence flow, and the quickstart demo.
+</div>
+
+<h2>What's here</h2>
+<ul>
+  <li><a href="simple/">/simple/</a> — PEP 503 index (this is what <code>pip</code> reads)</li>
+  <li><a href="simple/admiralty/">/simple/admiralty/</a> — per-package index with SHA-256 hashes</li>
+  <li><a href="https://github.com/tavisbasing/admiralty-dist/tree/main/wheels">/wheels/</a> — built wheels (<code>.whl</code>)</li>
+  <li><a href="https://github.com/tavisbasing/admiralty-dist/releases">Releases</a> — every published version with notes + SHA-256</li>
+</ul>
+
+<h2>Verifying a download</h2>
+<p>Each release page lists the wheel's SHA-256 hash. For production environments use <code>pip --require-hashes</code> with a pinned <code>requirements.txt</code>.</p>
+
+<h2>Licence</h2>
+<p>The wheels here are <strong>proprietary software</strong>. See <a href="https://github.com/tavisbasing/admiralty-dist/blob/main/LICENSE">LICENSE</a>. Reverse engineering, redistribution, or sublicensing is prohibited.</p>
+
+<h2>Support</h2>
+<ul>
+  <li>Product bugs / install issues: <a href="https://github.com/tavisbasing/Admiralty/issues">github.com/tavisbasing/Admiralty/issues</a></li>
+  <li>Distribution issues (wheel won't download, hash mismatch): <a href="https://github.com/tavisbasing/admiralty-dist/issues">github.com/tavisbasing/admiralty-dist/issues</a></li>
+  <li>Email: <code>admiralty@tech127.com</code></li>
+</ul>
+
+<hr>
+<footer>
+admiraltyai.com · operated by Tech 127 Pty Ltd · source repository is private; the wheels published here are the only public distribution channel.
+</footer>
+
+</main>
+</body>
+</html>
